@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banty Traders – Jain Ka Shuddh Dhaniya</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a class="logo" href="#">
+      <span class="logo-leaf">🌿</span>
+      <div>
+        <div class="logo-main">Banty Traders</div>
+        <div class="logo-sub">Jain Ka Shuddh Dhaniya</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#products">Products</a></li>
+      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+    </ul>
+    <button class="cart-btn" id="cart-toggle">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      <span class="cart-count" id="cart-count">0</span>
+    </button>
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#products" class="mobile-link">Products</a>
+    <a href="#why-us" class="mobile-link">Why Us</a>
+    <a href="#process" class="mobile-link">Process</a>
+    <a href="#testimonials" class="mobile-link">Reviews</a>
+  </div>
+</nav>
+
+<!-- CART SIDEBAR -->
+<div class="cart-overlay" id="cart-overlay"></div>
+<aside class="cart-sidebar" id="cart-sidebar">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="cart-close" id="cart-close">✕</button>
+  </div>
+  <div class="cart-items" id="cart-items">
+    <div class="cart-empty" id="cart-empty">
+      <div class="cart-empty-icon">🛒</div>
+      <p>Your cart is empty</p>
+      <span>Add some fresh dhaniya to get started!</span>
+    </div>
+  </div>
+  <div class="cart-footer" id="cart-footer" style="display:none;">
+    <div class="cart-total">
+      <span>Total</span>
+      <span class="cart-total-amount" id="cart-total">₹0</span>
+    </div>
+    <p class="cart-note">Free delivery on orders above ₹299</p>
+    <button class="btn-checkout">Proceed to Checkout →</button>
+  </div>
+</aside>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        99.8% Purity · Farm to Pack Verified
+      </div>
+      <h1 class="hero-title">
+        Jain Ka <em>Shuddh</em><br>Dhaniya
+      </h1>
+      <p class="hero-subtitle">Pura aur Prakritik — crafted with the purity your family deserves. No additives, no compromise, just nature's finest coriander.</p>
+      <div class="hero-actions">
+        <a href="#products" class="btn-primary">Shop Now</a>
+        <a href="#why-us" class="btn-ghost">Learn More</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>99.8%</strong><span>Purity</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>10K+</strong><span>Families</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>100%</strong><span>Natural</span></div>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <div class="hero-blob"></div>
+      <div class="hero-product-card">
+        <div class="product-badge-hero">PREMIUM</div>
+        <div class="hero-pack-img">
+          <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=300&h=400&fit=crop" alt="Dhaniya Powder" class="hero-img" />
+          <div class="hero-img-overlay"></div>
+        </div>
+        <div class="hero-card-info">
+          <div class="purity-bar">
+            <span>Purity</span>
+            <div class="bar-track"><div class="bar-fill"></div></div>
+            <span>99.8%</span>
+          </div>
+        </div>
+      </div>
+      <div class="floating-tag tag1">🌿 100% Pure</div>
+      <div class="floating-tag tag2">✓ Jain Approved</div>
+    </div>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f9f6f0"/></svg>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item">🚚 Free Delivery above ₹299</div>
+    <div class="trust-sep">·</div>
+    <div class="trust-item">🌿 100% Natural Ingredients</div>
+    <div class="trust-sep">·</div>
+    <div class="trust-item">🔒 Hygienic Sealed Packs</div>
+    <div class="trust-sep">·</div>
+    <div class="trust-item">⭐ 4.8★ Average Rating</div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products-section" id="products">
+  <div class="section-container">
+    <div class="section-header">
+      <div class="section-tag">Our Products</div>
+      <h2 class="section-title">Premium Shuddh Dhaniya Powder</h2>
+      <p class="section-sub">Pick your pack — same purity, every size</p>
+    </div>
+    <div class="products-grid">
+
+      <div class="product-card" data-id="1" data-name="Dhaniya Powder 100g" data-price="49" data-size="100g">
+        <div class="product-img-wrap">
+          <div class="product-badge-label">Starter Pack</div>
+          <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&h=300&fit=crop" alt="100g Pack" class="product-img"/>
+          <div class="product-overlay">
+            <span>Farm-to-Pack Verified</span>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-size-tag">100g</div>
+          <h3 class="product-name">Shuddh Dhaniya Powder</h3>
+          <p class="product-desc">Perfect for small families. Fresh, aromatic & pure.</p>
+          <div class="product-meta">
+            <div class="product-badges-row">
+              <span class="mini-badge">🌿 Pure</span>
+              <span class="mini-badge">✓ Hygienic</span>
+            </div>
+          </div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-main">₹49</span>
+              <span class="price-old">₹65</span>
+              <span class="price-off">25% off</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart(1, 'Dhaniya Powder 100g', 49, '100g')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card featured-card" data-id="2" data-name="Dhaniya Powder 200g" data-price="89" data-size="200g">
+        <div class="product-best-seller">⭐ Best Seller</div>
+        <div class="product-img-wrap">
+          <div class="product-badge-label">Most Popular</div>
+          <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&h=300&fit=crop" alt="200g Pack" class="product-img"/>
+          <div class="product-overlay">
+            <span>Farm-to-Pack Verified</span>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-size-tag">200g</div>
+          <h3 class="product-name">Shuddh Dhaniya Powder</h3>
+          <p class="product-desc">Our most loved pack. Great for regular kitchen use.</p>
+          <div class="product-meta">
+            <div class="product-badges-row">
+              <span class="mini-badge">🌿 Pure</span>
+              <span class="mini-badge">✓ Hygienic</span>
+              <span class="mini-badge">🏆 Best Value</span>
+            </div>
+          </div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-main">₹89</span>
+              <span class="price-old">₹120</span>
+              <span class="price-off">26% off</span>
+            </div>
+            <button class="btn-add-cart featured-btn" onclick="addToCart(2, 'Dhaniya Powder 200g', 89, '200g')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-id="3" data-name="Dhaniya Powder 500g" data-price="199" data-size="500g">
+        <div class="product-img-wrap">
+          <div class="product-badge-label">Family Pack</div>
+          <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&h=300&fit=crop" alt="500g Pack" class="product-img"/>
+          <div class="product-overlay">
+            <span>Farm-to-Pack Verified</span>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-size-tag">500g</div>
+          <h3 class="product-name">Shuddh Dhaniya Powder</h3>
+          <p class="product-desc">Big family, big value. Maximum freshness, sealed tight.</p>
+          <div class="product-meta">
+            <div class="product-badges-row">
+              <span class="mini-badge">🌿 Pure</span>
+              <span class="mini-badge">🏡 Family Pack</span>
+            </div>
+          </div>
+          <div class="product-footer">
+            <div class="product-price">
+              <span class="price-main">₹199</span>
+              <span class="price-old">₹280</span>
+              <span class="price-off">29% off</span>
+            </div>
+            <button class="btn-add-cart" onclick="addToCart(3, 'Dhaniya Powder 500g', 199, '500g')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-section" id="why-us">
+  <div class="why-bg-pattern"></div>
+  <div class="section-container">
+    <div class="section-header">
+      <div class="section-tag light-tag">Why Choose Us</div>
+      <h2 class="section-title white-title">The Banty Traders Promise</h2>
+      <p class="section-sub light-sub">Every pack carries our commitment to purity</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🌾</div>
+        <h4>100% Pure</h4>
+        <p>Sourced directly from trusted farms. No fillers, no chemicals. Just pure coriander, nothing else.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🧼</div>
+        <h4>Hygienically Packed</h4>
+        <p>Sealed in special hygienic packaging to lock in freshness and prevent any contamination.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🚜</div>
+        <h4>Farm to Pack</h4>
+        <p>We control the entire supply chain — from harvest to grinding to your doorstep.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🕉️</div>
+        <h4>Jain Approved</h4>
+        <p>Prepared following strict Jain purity standards. Trusted by thousands of Jain families across India.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🔬</div>
+        <h4>Lab Tested</h4>
+        <p>Every batch is quality-checked for 99.8% purity before it reaches your kitchen.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💚</div>
+        <h4>No Additives</h4>
+        <p>Zero artificial color, zero preservatives. Just the natural green-gold of fresh dhaniya.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section" id="process">
+  <div class="section-container">
+    <div class="section-header">
+      <div class="section-tag">Our Process</div>
+      <h2 class="section-title">Farm to Your Kitchen</h2>
+      <p class="section-sub">Five steps. Zero compromise.</p>
+    </div>
+    <div class="process-timeline">
+      <div class="process-step">
+        <div class="step-icon-wrap">
+          <div class="step-icon">🌾</div>
+          <div class="step-num">01</div>
+        </div>
+        <div class="step-connector"></div>
+        <h4>Harvesting</h4>
+        <p>Hand-selected from premium coriander farms across Rajasthan</p>
+      </div>
+      <div class="process-step">
+        <div class="step-icon-wrap">
+          <div class="step-icon">🧹</div>
+          <div class="step-num">02</div>
+        </div>
+        <div class="step-connector"></div>
+        <h4>Cleaning</h4>
+        <p>Multi-stage cleaning to remove dust, stones & impurities</p>
+      </div>
+      <div class="process-step">
+        <div class="step-icon-wrap">
+          <div class="step-icon">⚙️</div>
+          <div class="step-num">03</div>
+        </div>
+        <div class="step-connector"></div>
+        <h4>Grinding</h4>
+        <p>Slow-ground to retain essential oils & natural aroma</p>
+      </div>
+      <div class="process-step">
+        <div class="step-icon-wrap">
+          <div class="step-icon">📦</div>
+          <div class="step-num">04</div>
+        </div>
+        <div class="step-connector"></div>
+        <h4>Packaging</h4>
+        <p>Sealed in hygienic packs within hours of grinding</p>
+      </div>
+      <div class="process-step last-step">
+        <div class="step-icon-wrap">
+          <div class="step-icon">🚚</div>
+          <div class="step-num">05</div>
+        </div>
+        <h4>Delivery</h4>
+        <p>Fast, safe delivery right to your doorstep</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section" id="testimonials">
+  <div class="testi-bg"></div>
+  <div class="section-container">
+    <div class="section-header">
+      <div class="section-tag">Reviews</div>
+      <h2 class="section-title">What Families Say</h2>
+      <p class="section-sub">Real customers, real kitchens, real love</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Bahut hi shuddh dhaniya hai. Khushbu aisi hai jaise seedha khet se aaya ho. Hamare ghar mein ab yahi use hoti hai."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">S</div>
+          <div><strong>Sunita Jain</strong><span>Jaipur, Rajasthan</span></div>
+        </div>
+      </div>
+      <div class="testi-card featured-testi">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"As a Jain family, purity is everything. Banty Traders has never let us down. 500g pack lasts us a month and the quality is consistent."</p>
+        <div class="testi-author">
+          <div class="testi-avatar green-av">R</div>
+          <div><strong>Rajesh Shah</strong><span>Surat, Gujarat</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"The aroma is incredible — you can smell the difference immediately. No artificial colors, packaging is sturdy. Will keep reordering!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar">P</div>
+          <div><strong>Priya Mehta</strong><span>Indore, MP</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="rating-summary">
+      <div class="rating-big">4.8</div>
+      <div class="rating-stars-big">★★★★★</div>
+      <div class="rating-label">Based on 1,200+ reviews</div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER STRIP -->
+<section class="newsletter-strip">
+  <div class="nl-content">
+    <div>
+      <h3>Get 10% off your first order</h3>
+      <p>Subscribe for recipes, offers & fresh news from the farm</p>
+    </div>
+    <div class="nl-form">
+      <input type="email" placeholder="Your email address" class="nl-input"/>
+      <button class="nl-btn">Subscribe</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <span>🌿</span> Banty Traders
+      </div>
+      <p class="footer-tagline">Jain Ka Shuddh Dhaniya — Pura aur Prakritik.<br>Bringing nature's finest to Indian kitchens since 2010.</p>
+      <div class="footer-social">
+        <a href="#" class="social-link">📘 Facebook</a>
+        <a href="#" class="social-link">📸 Instagram</a>
+        <a href="#" class="social-link">🐦 Twitter</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Shop</h5>
+      <a href="#products">Dhaniya Powder 100g</a>
+      <a href="#products">Dhaniya Powder 200g</a>
+      <a href="#products">Dhaniya Powder 500g</a>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="#">About Us</a>
+      <a href="#why-us">Our Promise</a>
+      <a href="#process">Our Process</a>
+    </div>
+    <div class="footer-col">
+      <h5>Support</h5>
+      <a href="#">Contact Us</a>
+      <a href="#">FAQs</a>
+      <a href="#">Returns Policy</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Banty Traders. All rights reserved.</span>
+    <span>Made with 💚 for Jain families across India</span>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="cart.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
